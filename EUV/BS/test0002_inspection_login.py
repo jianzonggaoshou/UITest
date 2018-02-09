@@ -8,6 +8,7 @@ from Login import Login
 class Test(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
         self.driver.get("http://172.16.40.240:8080/sitopeuv/")
 
     def test_case(self):

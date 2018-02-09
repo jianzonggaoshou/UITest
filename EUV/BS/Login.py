@@ -1,5 +1,6 @@
 # coding:utf-8
 from selenium.webdriver.common.by import By
+from time import sleep
 
 
 class Login:
@@ -7,7 +8,7 @@ class Login:
         pass
 
     @staticmethod
-    def inspection_team_leader_login(driver, username, password):
+    def login(driver, username, password):
         driver.find_element(By.ID, "userName").clear()
         driver.find_element(By.ID, "userName").send_keys(username)
         driver.find_element(By.ID, "userPwd").clear()
